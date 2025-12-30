@@ -11,7 +11,7 @@
   }
 
   .changelog {
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
     background: white;
     padding: 20px;
@@ -32,11 +32,20 @@
   }
 
   .timeline {
-    border-left: 2px solid #000000;
-    /* position: relative; */
-    padding-left: 20px;
-    align-content: center;
+    position: relative;
+    margin-top: 40px;
     
+  }
+/* vertical line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #000000;
+    transform: translateX(-50%);
   }
 
   .item {
@@ -65,6 +74,7 @@
     border-radius: 50%;
     z-index: 1;
     display: inline-block;
+    
 
   }
 
@@ -76,18 +86,17 @@
     
   }
   .visit-link {
-    align-content: center;
-    margin-top: 30px;
-    
-    
+    margin-top: 40px;
+    text-align: center;
+     
   }
+
   .visit-link a {
     color: #ffffff;
     text-decoration: none;
-    width: 200px;
     border-radius: 20px;
-    background-color: #01101a;
-    padding: 15px;
+    background-color: #3e0044;
+    padding: 20px;
     text-align: center;
   }
 
