@@ -11,12 +11,13 @@
   }
 
   .changelog {
-    max-width: 600px;
+    max-width: 1000px;
     margin: auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-content: center;
   }
 
   .changelog h1 {
@@ -31,35 +32,61 @@
   }
 
   .timeline {
-    position: relative;
+    border-left: 2px solid #000000;
+    /* position: relative; */
     padding-left: 20px;
-    border-left: 2px solid #ddd;
+    align-content: center;
+    
   }
 
   .item {
-    position: relative;
-    margin-bottom: 20px;
-    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    align-items: center;
+
+    
+
   }
 
-  .item .date {
-    font-weight: bold;
+  .date {
     color: #555;
+    text-align: right;
+    padding-right: 20px;
+    
+    
   }
 
-  .item .dot {
-    position: absolute;
-    left: -9px;
+   .dot {
+    justify-self: center; /* defines how one item is aligned inside a container */
     top: 5px;
-    width: 12px;
-    height: 12px;
-    background-color: #3498db;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
     border-radius: 50%;
+    z-index: 1;
+    display: inline-block;
+
   }
 
-  .item .content {
-    margin-top: 5px;
-    color: #333;
+  .content {
+    color: #000000;
+    display: inline-block;
+    padding-left: 20px;
+    text-align: left;
+    
+  }
+  .visit-link {
+    align-content: center;
+    margin-top: 30px;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #01101a;
+    padding: 15px;
+  }
+  .visit-link a {
+    color: #ffffff;
+    text-decoration: none;
   }
 
 </style>
@@ -72,6 +99,7 @@
   <p class="subtitle">Here's everything we have shipped in the past few days</p>
 
   <div class="timeline">
+
     <div class="item">
       <span class="date">September 3, 2024</span>
       <span class="dot"></span>
@@ -95,7 +123,24 @@
       <span class="dot"></span>
       <p class="content">Submit your project solution and get feedback</p>
     </div>
+    <div class="item">
+      <span class="date">August 15, 2024</span>
+      <span class="dot"></span>
+      <p class="content">Backend Project Ideas</p>
+    </div>
+    <div class="item">
+      <span class="date">August 10, 2024</span>
+      <span class="dot"></span>
+      <p class="content">Redis roadmap</p>
+    </div>
+    <div class="item">
+      <span class="date">August 1, 2024</span>
+      <span class="dot"></span>
+      <p class="content">Changelog page to help you stay in the loop</p>
+    </div>
   </div>
+
+  <div class ="visit-link"> <a href="#">Visit Complete Changelog</a> </div>
 </section>
 
 </body>
